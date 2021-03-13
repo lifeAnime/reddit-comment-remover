@@ -1,6 +1,7 @@
 # reddit-comment-remover
 
 First you need Python and these packages : requests, json, time
+
 Then you need to edit the 'auth' and 'data' dicts in utils.py, here is an example of how they should look :
 
 ```python
@@ -9,7 +10,7 @@ data = {'grant_type': 'password',
         'username': 'HoloDragon3232',
         'password': 'Basicpassword123'}
 ```
-To get your <PERSONAL USE SCRIPT ID> and <SECRET> you need to go here : https://www.reddit.com/prefs/apps and on the bottom of the page click on 'Create another app'
+To get your 'PERSONAL USE SCRIPT ID' and 'SECRET' you need to go here : https://www.reddit.com/prefs/apps and on the bottom of the page click on 'Create another app'
   Then choose a name for your app, select 'script', in redirect uri put https://google.com
 
 It's a fairly simple program, but I'm a newbie and the code is not very clean so you may have trouble to go through it.
