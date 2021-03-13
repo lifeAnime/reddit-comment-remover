@@ -1,5 +1,4 @@
-import requests, json, time
-import utils
+import requests, time, utils
 
 auth = utils.auth
 data = utils.data
