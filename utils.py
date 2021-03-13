@@ -26,9 +26,8 @@ def edit_comment(headers, message_id):
         exit()
     else:
         if (r.status_code == 429):
-            while (r.headers['X-Ratelimit-Remaining'] == 0):
-                print(f"ratelimited. {r.headers['X-Ratelimit-Reset']} seconds to go                                             ")
-                time.sleep(1)
+            print(f"ratelimited. Program paused for {r.headers['X-Ratelimit-Reset']} seconds")
+            time.sleep(int(r.headers['X-Ratelimit-Reset']))
             edit_comment(headers, message_id)
             return
         elif (r.status_code != 200):
@@ -44,9 +43,8 @@ def delete_comment(headers, message_id):
         exit()
     else:
         if (r.status_code == 429):
-            while (r.headers['X-Ratelimit-Remaining'] == 0):
-                print(f"ratelimited. {r.headers['X-Ratelimit-Reset']} seconds to go                                               ")
-                time.sleep(1)
+            print(f"ratelimited. Program paused for {r.headers['X-Ratelimit-Reset']} seconds")
+            time.sleep(int(r.headers['X-Ratelimit-Reset']))
             delete_comment(headers, message_id)
             return
         elif (r.status_code != 200):
@@ -73,9 +71,8 @@ def check_comments(headers, message_list):
         exit()
     else:
         if (r.status_code == 429):
-            while (r.headers['X-Ratelimit-Remaining'] == 0):
-                print(f"ratelimited. {r.headers['X-Ratelimit-Reset']} seconds to go                                            ")
-                time.sleep(1)
+            print(f"ratelimited. Program paused for {r.headers['X-Ratelimit-Reset']} seconds")
+            time.sleep(int(r.headers['X-Ratelimit-Reset']))
             check_comments(headers, message_list)
             return 0
         elif (r.status_code != 200):
