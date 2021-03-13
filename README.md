@@ -1,5 +1,6 @@
 # reddit-comment-remover
 
+Don't hesitate to ask if you have any issue !
 First you need Python and these packages : requests, time  
 Then on line 18 of main.py change the 'your username here' to your actual reddit username :  
 ```python
