@@ -20,6 +20,6 @@ The program makes 100 API calls to EDIT 100 messages
   Which makes it 201 API calls per 100 messages.  
 
 Reddit allows you 600 API calls every 10 minutes.  
-So this program will remove on average 30 messages per minute.  
+So this program will remove on average 30 messages per minute.(1 every 2 seconds)
 
 Just use 'python [path to main.py]' to run the program
