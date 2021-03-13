@@ -15,7 +15,7 @@ if (TOKEN == 'error'):
 
 while (1):
     try:
-        r = requests.get(f'https://oauth.reddit.com/user/hynauts/comments?limit=100', headers=headers)
+        r = requests.get(f'https://oauth.reddit.com/user/<your username here>/comments?limit=100', headers=headers)
     except Exception as e:
         print("requests module error :",e)
         exit()
