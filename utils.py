@@ -1,4 +1,4 @@
-import json, requests, time
+import requests, time
 
 auth = requests.auth.HTTPBasicAuth('L8SOtFFdaunpFA', '2Zau2eD-JyphePs13LQ0F1ak-npFGQ')
 data = {'grant_type': 'password',
