@@ -19,9 +19,8 @@ while (1):
         print("requests module error :",e)
         exit()
     if (r.status_code == 429):
-            while (r.headers['X-Ratelimit-Remaining'] == 0):
-                print(f"ratelimited. {r.headers['X-Ratelimit-Reset']} seconds to go")
-                time.sleep(1)
+            print(f"ratelimited. Program paused for {r.headers['X-Ratelimit-Reset']} seconds")
+            time.sleep(int(r.headers['X-Ratelimit-Reset']))
             continue
     elif (r.status_code != 200):
         print(r.request.body, "\n", "HTTP Error",r.status_code)
