@@ -1,6 +1,11 @@
 # reddit-comment-remover
 
 First you need Python and these packages : requests, json, time  
+Then on line 18 of main.py change the 'your username here' to your actual reddit username :  
+```python
+r = requests.get(f'https://oauth.reddit.com/user/<your username here>/comments?limit=100', headers=headers)  
+```  
+
 Then you need to edit the 'auth' and 'data' dicts in utils.py, here is an example of how they should look :
 
 ```python
