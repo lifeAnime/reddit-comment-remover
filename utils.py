@@ -2,8 +2,8 @@ import requests, time
 
 auth = requests.auth.HTTPBasicAuth('L8SOtFFdaunpFA', '2Zau2eD-JyphePs13LQ0F1ak-npFGQ')
 data = {'grant_type': 'password',
-        'username': 'Hynauts',
-        'password': 'H@l03dst'}
+        'username': 'x',
+        'password': 'x'}
 headers = {'User-Agent': 'Py:Shredder:1.0 (by /u/hynauts)'}
 
 def fetch_token(auth=auth, data=data, headers=headers):
